@@ -1,14 +1,21 @@
-import React, { useState } from "react";
-import { Text, View } from "react-native";
+import React from "react";
+import ButtonIcon from "../../compoents/ButtonIcon";
 
-import { Container, Input } from "./styles";
+import { Container, Cover, Content, Title, SubTitle } from "./styles";
 
 const SignIn: React.FC = () => {
-  const [email, setEmail] = useState("");
   return (
     <Container>
-      <Text>Login</Text>
-      <Input placeholder="Seu email" onChangeText={setEmail} />
+      <Cover />
+      <Content>
+        <Title>
+          Organize {`\n`}suas jogatinas {`\n`}facilmente
+        </Title>
+        <SubTitle>
+          Crie grupos para jogar seus games {`\n`}favoritos com seus amigos
+        </SubTitle>
+        <ButtonIcon title="Entrar com Discord" />
+      </Content>
     </Container>
   );
 };
